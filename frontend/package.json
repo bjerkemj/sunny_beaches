@@ -1,0 +1,16 @@
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 8080"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "http-server": "^0.12.3"
+  },
+  "devDependencies": {},
+  "author": "Your Name",
+  "license": "MIT"
+}

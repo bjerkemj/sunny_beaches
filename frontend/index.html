@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunny Beaches</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/webp" href="sun-icon.png" />
+    <!-- Include your CSS file -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sunny Beaches</h1>
+      <button id="infoButton">Info</button>
+        <p id="visitCounter"></p>
+    </div>
+
+    <!-- Create a container for beach divs -->
+    <div class="beach-container">
+      <!-- Beach Div 1 -->
+      <div class="beach-div">
+        <div class="beach-info">
+          <h2>Sharpes Beach</h2>
+          <p>Weather: <span id="SharpesBeachWeather">Loading...</span></p>
+          <p>Swell: <span id="SharpesBeachSwell">Loading...</span></p>
+        </div>
+        <div class="color-square" id="SharpesBeachColorSquare"></div>
+      </div>
+
+      <!-- Beach Div 2 -->
+      <div class="beach-div">
+        <div class="beach-info">
+          <h2>Coolangatta</h2>
+          <p>Weather: <span id="CoolangattaWeather">Loading...</span></p>
+          <p>Swell: <span id="CoolangattaSwell">Loading...</span></p>
+        </div>
+        <div class="color-square" id="CoolangattaColorSquare"></div>
+      </div>
+
+      <!-- Beach Div 3 -->
+      <div class="beach-div">
+        <div class="beach-info">
+          <h2>Woorim Beach</h2>
+          <p>Weather: <span id="WoorimBeachWeather">Loading...</span></p>
+          <p>Swell: <span id="WoorimBeachSwell">Loading...</span></p>
+        </div>
+        <div class="color-square" id="WoorimBeachColorSquare"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Search location by coordinates:</h2>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="latitudeInput" placeholder="Latitude" />
+      <input type="text" id="longitudeInput" placeholder="Longitude" />
+      <button onclick="search()">Search</button>
+    </div>
+
+    <div class="beach-container">
+      <div class="beach-div" id="search-div">
+        <div class="beach-info">
+          <h2>Search Result</h2>
+          <p>Weather: <span id="searchWeather">Loading...</span></p>
+          <p>Swell: <span id="searchSwell">Loading...</span></p>
+        </div>
+        <div class="color-square" id="searchColorSquare"></div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Welcome to Sunny Beaches</h2>
+        <p>This webpage shows the conditions at three beaches in proximity of Brisbane. The colored square gives an indication of the surf based on weathertype and swell. There are four different colors, ranging from perfect to bad. These colors in the same order are: limegreen, mossgreen, yellow and red. The beaches permanently shown are mostly in the mossgreen and yellow category. If you wish to see a place with red conditions check out Antalya in Turkey, with coordinates: 36.90812 30.69556</p>
+      </div>
+    </div>
+
+    <!-- Include your JavaScript file -->
+    <script src="./scripts/apiScript.js"></script>
+    <script src="./scripts/modalScript.js"></script>
+  </body>
+</html>
